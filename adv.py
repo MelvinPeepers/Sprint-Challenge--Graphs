@@ -6,7 +6,6 @@ import random
 from ast import literal_eval
 
 
-
 # Load world
 world = World()
 
@@ -57,6 +56,16 @@ class Stack():
 traversal_path = []
 
 
+def dft(self, traversal_path):
+
+    # Create a ss
+    ss = Stack()
+    # push starting room as you start in room 0
+    ss.push(0)
+    # Create a set of traversed vertices
+    visited = set()
+
+
 # TRAVERSAL TEST - DO NOT MODIFY
 visited_rooms = set()
 player.current_room = world.starting_room
@@ -77,12 +86,12 @@ else:
 #######
 # UNCOMMENT TO WALK AROUND
 #######
-player.current_room.print_room_description(player)
-while True:
-    cmds = input("-> ").lower().split(" ")
-    if cmds[0] in ["n", "s", "e", "w"]:
-        player.travel(cmds[0], True)
-    elif cmds[0] == "q":
-        break
-    else:
-        print("I did not understand that command.")
+# player.current_room.print_room_description(player)
+# while True:
+#    cmds = input("-> ").lower().split(" ")
+#    if cmds[0] in ["n", "s", "e", "w"]:
+#        player.travel(cmds[0], True)
+#    elif cmds[0] == "q":
+#        break
+#    else:
+#        print("I did not understand that command.")
