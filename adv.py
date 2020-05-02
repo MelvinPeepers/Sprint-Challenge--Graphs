@@ -59,11 +59,30 @@ traversal_path = []
 def dft(self, traversal_path):
 
     # Create a ss
-    ss = Stack()
+    #ss = Stack()
     # push starting room as you start in room 0
-    ss.push(0)
+    # ss.push(0)
     # Create a set of traversed vertices
-    visited = set()
+    #visited = set()
+    # While queue is not empty:
+    # while ss.size() > 0:
+    #    path = ss.pop()
+    #    # if not visited
+    #    if room_id not in visited:
+    #        # Do the Thing!!!
+    #        print(path[-1])
+    #        # mark as vsisitd
+    #        visited.add(path[-1])
+    #        # enqueue all neighbors
+    #        not_visited = []
+    #        for direction, room_id in neighbors.items():
+    #            # if not visited
+    #            if room_id not in visited:
+    #                # add to visted stack
+    #                not_visited.append((room_id, direction))
+
+
+dft(0, traversal_path)
 
 
 # TRAVERSAL TEST - DO NOT MODIFY
