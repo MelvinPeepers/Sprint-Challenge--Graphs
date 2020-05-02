@@ -6,23 +6,6 @@ import random
 from ast import literal_eval
 
 
-class Graph:
-
-    def __init__(self):
-        self.vertices = {}
-
-    def add_vertex(self, vertex_id):
-        self.vertices[vertex_id] = set()
-
-    def add_edge(self, v1, v2):
-        if v1 in self.vertices and v2 in self.vertices:
-            self.vertices[v1].add(v2)
-        else:
-            raise IndexError("That vertex does not exist!")
-
-    def get_neighbors(self, vertex_id):
-        return self.vertices[vertex_id]
-
 
 # Load world
 world = World()
@@ -46,6 +29,31 @@ player = Player(world.starting_room)
 
 # Fill this out with directions to walk
 # traversal_path = ['n', 'n']
+
+
+class Stack():
+    def __init__(self):
+        self.stack = []
+
+    def push(self, value):
+        self.stack.append(value)
+
+    def pop(self):
+        if self.size() > 0:
+            return self.stack.pop()
+        else:
+            return None
+
+    def peek(self):
+        if self.size > 0:
+            return self.stack[len(self.stack)-1]
+        else:
+            print('Nothing to see here!')
+
+    def size(self):
+        return len(self.stack)
+
+
 traversal_path = []
 
 
